@@ -291,8 +291,88 @@ body {
 
 
 .explore-items{
-  background-color: #1f1235
+  background-color: #ddd;
+  margin-top: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  padding: 20px;
+   border: 1px solid #ca2f2f;
 }
+.explore-heading{
+  font-weight: bold;
+}
+.scroller-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.product-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+ 
+  padding-top: 10px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.product-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  min-width: 180px;
+  flex-shrink: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.product-name {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.product-price {
+  color: green;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
 
 
 
