@@ -4,6 +4,7 @@ import HomePageImage from "../components/HomePageElement/HomePageImage";
 import SearchingContainer from "../components/HomePageElement/SearchingContainer";
 import ProductArea from "../components/HomePageElement/ProductArea";
 import ExploreProducts from "../components/HomePageElement/ExploreProducts";
+import BottomArea from "../components/HomePageElement/BottomArea";
 
 
 
@@ -23,16 +24,8 @@ function HomePage(){
          <SearchingContainer />
          <ProductArea />
          <ExploreProducts />
-
-          {/* Item List */}
-          <main className="item-list">
-            <h2>Available Items</h2>
-            <ul>
-              {items.map((item, index) => (
-                <li key={index} className="item-card">{item}</li>
-              ))}
-            </ul>
-          </main>
+         <BottomArea />
+      
         </div>
       );
 }
