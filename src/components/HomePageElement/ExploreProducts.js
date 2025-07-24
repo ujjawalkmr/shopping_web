@@ -99,6 +99,10 @@ function ExploreProducts(){
 
       {showRight && <button className="scroll-btn right" onClick={scrollRight}>▶</button>}
     </div>
+    <div className="center-button">
+    <button className="view-arrivals" type="button">View all new arrivals</button>
+  </div>
+
 
 
 </div>
