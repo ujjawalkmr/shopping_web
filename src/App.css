@@ -1,38 +1,536 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-bar {
+  position: fixed;
+  top: 30;
+  width: 100%;
+  z-index: 1000;
+  background-color: #1f1235;
+  color: #f4f4f4;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-items {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  gap: 10px;
+  /* sets spacing between ALL items */
+  font-size: 12px;
+}
+
+.logo-text-group {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 10px;
+
+}
+
+.app-bar-logo {
+  height: 40px;
+  /* adjust as needed */
+}
+
+.app-bar-child {
+  display: flex;
+  gap: 0px;
+
+}
+
+.tralling-icon-app-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  /* 👈 Pushes this element to the far right */
+  font-weight: bold;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.emoji-container {
+  width: auto;
+  height: auto;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 14px;
+  background-color: #f0f0f0;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 4px;
+}
+
+
+
+
+
+
+
+
+.main-img-container {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  /* Half of the screen height */
+  overflow: hidden;
+}
+
+.main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the image fills the container without distortion */
+  display: block;
+}
+
+.main-img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 2;
+  max-width: 90%;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+/* Prevent overlap with AppBar on small screens */
+@media (max-height: 500px) {
+  .main-img-container {
+    height: 300px;
+  }
+
+  .main-img-text {
+    top: 60%;
+    /* Push text lower */
+    transform: translate(-50%, -60%);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-button {
+  padding: 15px 30px;
+  font-size: 16px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.image-button:hover {
+  background-color: darkgreen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.home-container {
+  margin-top: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #333;
+  border-radius: 4px;
+  /* One border around the whole container */
+  padding: 4px;
+  gap: 20px;
+  flex-wrap: nowrap;
+  /* Prevent wrapping */
+  overflow-x: auto;
+  /* Space between sections */
+  justify-content: space-between;
+}
+
+.left-section {
+  display: flex;
+  flex: 01;
+  /* padding: 8px; */
+  background-color: #dfa87b;
+  ;
+  border-radius: 4px;
+  flex-wrap: nowrap;
+  /* Prevent wrapping */
+  overflow-x: auto;
+}
+
+.left-section::-webkit-scrollbar {
+  display: none;
+}
+
+.left-section {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  /* ✅ Horizontal layout */
+  justify-content: flex-end;
+  /* ✅ Push items to the right */
+  align-items: end;
+  /* Optional: vertically center items */
+
+
+  /* Space between items */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+.filter-content {
+
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.filter {
+  display: flex;
+  /* 👈 aligns children in a row */
+  align-items: start;
+  /* 👈 vertically centers image and text */
+  gap: 10px;
+
+}
+
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  /* 👈 stacks items vertically */
+  gap: 10px;
+  /* 👈 space between each dropdown */
+  padding: 10px;
+}
+
+
+.filter-icon {
+  width: 15px;
+  height: 20px;
+}
+
+.filter-text {
+  color: black;
+  padding-bottom: 20px;
+}
+
+
+
+
+
+.products-content {
+  flex: 70%;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 8px;
+  max-height: 800px;
+  /* 👈 fixed height */
+  overflow-x: auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-index {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.product-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.product-name {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.product-price {
+  color: green;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.explore-items {
+  background-color: #ddd;
+  margin-top: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  padding: 20px;
+  border: 1px solid #ca2f2f;
+}
+
+.explore-heading {
+  font-weight: bold;
+}
+
+.scroller-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.product-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+
+  padding-top: 10px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.product-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  min-width: 180px;
+  flex-shrink: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.product-name {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.product-price {
+  color: green;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  /* optional spacing */
+}
+
+.view-arrivals {
+  background-color: #f49a7f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+}
+
+.view-arrivals:hover {
+  background-color: rgb(255, 77, 0);
+}
+
+
+
+
+
+.site-footer {
+  background-color: #1b1b1b;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px 20px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 10px;
+  color: #f5f5f5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+
+.social-icons img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-items span {
+  margin-left: 20px;
+
+  cursor: pointer;
+}
+
+.item-list {
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10;
+}
+
+.item-list ul {
+  display: grid;
+  /* 👈 grid for desktop view */
+  grid-template-columns: repeat(3, 1fr);
+  /* 4 items per row */
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.item-card {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
