@@ -24,39 +24,39 @@ import satnaja from "../../assets/images/satnaja.png";
 import seeds from "../../assets/images/seeds.png";
 
 
-  
 
 
 
 
-function ExploreProducts(){
-       const exploreProducts = [
-  { name: "Bajara", price: "₹120", image: bajara },
-  { name: "Bij", price: "₹150", image: beat },
-  { name: "Bij", price: "₹180", image: bij },
-   { name: "Chana dal", price: "₹120", image: chana_dal },
+
+function ExploreProducts() {
+  const exploreProducts = [
+    { name: "Bajara", price: "₹120", image: bajara },
+    { name: "Bij", price: "₹150", image: beat },
+    { name: "Bij", price: "₹180", image: bij },
+    { name: "Chana dal", price: "₹120", image: chana_dal },
     { name: "Chana", price: "₹120", image: chana },
-  { name: "Dal", price: "₹150", image: dal },
-  { name: "Daliya", price: "₹180", image: daliya },
-   { name: "Dhaniya", price: "₹120", image: daniya },
-  { name: "Dhan khet", price: "₹150", image: dhan_khet },
-  { name: "Dhan", price: "₹180", image: dhan },
-   { name: "Gehu type", price: "₹120", image: gehu_type },
-  { name: "Gehu", price: "₹150", image: gehu },
-  { name: "Honey", price: "₹180", image: honey },
-   { name: "Jao", price: "₹120", image: jao },
-  { name: "Kangji", price: "₹150", image: kangji },
-  { name: "Makka", price: "₹180", image: makka },
-   { name: "Makhana", price: "₹120", image: makhana },
-  { name: "Mix food", price: "₹150", image: mix_food },
-  { name: "Mung dala", price: "₹180", image: mung },
-   { name: "Ready fasal", price: "₹120", image: ready_fasal },
-  { name: "Rost dal", price: "₹150", image: rost_dal },
-  { name: "Satnaja", price: "₹180", image: satnaja },
-   { name: "Seeds", price: "₹120", image: seeds },
-  
-];
- const scrollRef = useRef(null);
+    { name: "Dal", price: "₹150", image: dal },
+    { name: "Daliya", price: "₹180", image: daliya },
+    { name: "Dhaniya", price: "₹120", image: daniya },
+    { name: "Dhan khet", price: "₹150", image: dhan_khet },
+    { name: "Dhan", price: "₹180", image: dhan },
+    { name: "Gehu type", price: "₹120", image: gehu_type },
+    { name: "Gehu", price: "₹150", image: gehu },
+    { name: "Honey", price: "₹180", image: honey },
+    { name: "Jao", price: "₹120", image: jao },
+    { name: "Kangji", price: "₹150", image: kangji },
+    { name: "Makka", price: "₹180", image: makka },
+    { name: "Makhana", price: "₹120", image: makhana },
+    { name: "Mix food", price: "₹150", image: mix_food },
+    { name: "Mung dala", price: "₹180", image: mung },
+    { name: "Ready fasal", price: "₹120", image: ready_fasal },
+    { name: "Rost dal", price: "₹150", image: rost_dal },
+    { name: "Satnaja", price: "₹180", image: satnaja },
+    { name: "Seeds", price: "₹120", image: seeds },
+
+  ];
+  const scrollRef = useRef(null);
   const [showLeft, setShowLeft] = useState(false);
   const [showRight, setShowRight] = useState(true);
 
@@ -81,32 +81,32 @@ function ExploreProducts(){
   const scrollRight = () => {
     scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
   };
-    return(
-<div className="explore-items">
-    <div className="explore-heading">Explore  our new arrivals</div>
-    <div className="scroller-wrapper">
-      {showLeft && <button className="scroll-btn left" onClick={scrollLeft}>◀</button>}
+  return (
+    <div className="explore-items">
+      <div className="explore-heading">Explore  our new arrivals</div>
+      <div className="scroller-wrapper">
+        {showLeft && <button className="scroll-btn left" onClick={scrollLeft}>◀</button>}
 
-      <div className="product-scroll-container" ref={scrollRef}>
-        {exploreProducts.map((item, index) => (
-          <div className="product-card" key={index}>
-            <img src={item.image} alt={item.name} className="product-img" />
-            <div className="product-name">{item.name}</div>
-            <div className="product-price">{item.price}</div>
-          </div>
-        ))}
+        <div className="product-scroll-container" ref={scrollRef}>
+          {exploreProducts.map((item, index) => (
+            <div className="product-card" key={index}>
+              <img src={item.image} alt={item.name} className="product-img" />
+              <div className="product-name">{item.name}</div>
+              <div className="product-price">{item.price}</div>
+            </div>
+          ))}
+        </div>
+
+        {showRight && <button className="scroll-btn right" onClick={scrollRight}>▶</button>}
+      </div>
+      <div className="center-button">
+        <button className="view-arrivals" type="button">View all new arrivals</button>
       </div>
 
-      {showRight && <button className="scroll-btn right" onClick={scrollRight}>▶</button>}
+
+
     </div>
-    <div className="center-button">
-    <button className="view-arrivals" type="button">View all new arrivals</button>
-  </div>
-
-
-
-</div>
-    );
+  );
 }
 
 export default ExploreProducts;
