@@ -68,6 +68,21 @@ body {
   padding: 4px;
 }
 
+.app-bar-child span {
+  white-space: nowrap;
+  /* 👈 prevents line breaks */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tralling-icon-app-bar span {
+  white-space: nowrap;
+  /* 👈 prevents line breaks */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 
 
 
@@ -289,6 +304,7 @@ body {
   padding: 10px;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .product-index {
