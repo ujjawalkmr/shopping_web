@@ -1,6 +1,9 @@
 .product-detail-container {
     display: flex;
     flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
     /* width: 100%; */
     min-height: 400px;
     /* or whatever height you need */
@@ -8,11 +11,17 @@
     /* optional spacing between left and right */
     padding: 20px;
     background: linear-gradient(to right, #cea521, #0f83f7);
+
 }
+
 
 .details-left {
     flex: 1;
     /* makes both sides take equal width */
+    flex-direction: row;
+
+    overflow: hidden;
+    flex-wrap: nowrap;
     background-color: #4d12d8;
     /* just for visual clarity */
 

@@ -4,11 +4,14 @@ import { useState } from "react";
 import products from "../../data/productsData";
 import { loremIpsum } from "lorem-ipsum";
 import "../../pages/Products/ProductDetails.css"
+import ImageModal from "../../components/Popup/ImagePopup";
 
 function ProductDetail() {
     const { id } = useParams();
     const product = products[parseInt(id)];
     const [selectedImage, setSelectedImage] = useState(product?.images?.[0]);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
     const loremText = loremIpsum({ count: 2, units: "paragraphs" });
     if (!product || !product.images || product.images.length === 0) {
         return <div>Product not found or has no images</div>;
@@ -38,8 +41,20 @@ function ProductDetail() {
                         <img
                             src={selectedImage}
                             alt="Selected"
-                            className="selected-img"
+                            className="selected-img" onClick={() => {
+                                const index = product.images.indexOf(selectedImage);
+                                setCurrentIndex(index);
+                                setIsModalOpen(true);
+                            }}
                         />
+                        {isModalOpen && (
+                            <ImageModal
+                                images={product.images}
+                                currentIndex={currentIndex}
+                                setCurrentIndex={setCurrentIndex}
+                                onClose={() => setIsModalOpen(false)}
+                            />
+                        )}
                     </div>
                 </div>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import AppBarView from "./commonPage/appbar/AppBarView";
+import BottomArea from "./components/HomePageElement/BottomArea";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
+      <BottomArea />
     </Router>
   );
 }
