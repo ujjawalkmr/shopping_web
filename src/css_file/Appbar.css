@@ -1,0 +1,19 @@
+/* Navbar.css */
+.appbar {
+    background-color: rgb(226, 73, 43);
+    list-style: none;
+    /* remove bullets */
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    /* flexbox makes items go in a row */
+    gap: 1rem;
+}
+
+
+
+.appbar li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}

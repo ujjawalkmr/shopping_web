@@ -1,28 +1,24 @@
-import React from "react";
-import AppBarView from "./commonPage/appbar/AppBarView";
-import BottomArea from "./components/HomePageElement/BottomArea";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import "./App.css";
-import HomePage from "./pages/HomePage";
-import ProductDetail from "./pages/Products/ProductDetailsPage";
-
+import Appbar from "./component/Appbar"
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Product = lazy(() => import("./pages/Product"));
 function App() {
-  const handleNavClick = (item) => {
-    console.log(`Clicked!!!! on: ${item}`);
-    // You can add more logic here, like navigation or state updates
-  };
-  return (
-    <Router>
-      <AppBarView onNavClick={handleNavClick} />
-      <div style={{ height: '70px' }} />
-      <Routes>
 
-        <Route path="/" element={<HomePage />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
-      </Routes>
-      <BottomArea />
-    </Router>
+  return (
+
+    <div>
+      <Appbar />
+      {/* Suspense shows fallback while lazy component loads */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/product" element={<Product />} />
+        </Routes>
+      </Suspense>
+      Hii</div>
   );
 }
 
