@@ -4,6 +4,12 @@ import Appbar from "./component/Appbar"
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Product = lazy(() => import("./pages/Product"));
+const Contact=lazy(()=>import("./pages/Contact"));
+const Subscription=lazy(()=>import("./pages/Subscription"));
+const Gift=lazy(()=>import("./pages/Gift"));
+const Login=lazy(()=>import("./pages/Login"));
+const Profile=lazy(()=>import("./pages/Profile"));
+
 function App() {
 
   return (
@@ -16,6 +22,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/product" element={<Product />} />
+           <Route path="/contact" element={<Contact />} />
+            <Route path="/subscription" element={<Subscription />} />
+             <Route path="/gift" element={<Gift />} />
+             <Route path="/login" element={<Login/>}/>
+             <Route path="profile" element={<Profile/>}/>
         </Routes>
       </Suspense>
       Hii</div>
