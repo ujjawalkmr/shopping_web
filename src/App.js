@@ -1,8 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Appbar from "./component/Appbar";
-import ImageSlider from "./component/ImageSlider";
-import TextSlider from "./component/TextSlider";
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Product = lazy(() => import("./pages/Product"));
@@ -18,8 +16,7 @@ function App() {
 
     <div>
       <Appbar />
-      <ImageSlider/>
-      <TextSlider/>
+     
       {/* Suspense shows fallback while lazy component loads */}
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
@@ -33,7 +30,7 @@ function App() {
              <Route path="profile" element={<Profile/>}/>
         </Routes>
       </Suspense>
-      Hii</div>
+      </div>
   );
 }
 

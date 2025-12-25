@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import "../css_file/ImageSlider.css";
-import SliderImage1 from "../assets/images/image1.jpg";
-import SliderImage2 from "../assets/images/image2.jpg";
-import SliderImage3 from "../assets/images/i3.jpg";
+
 
 const images = [
-  SliderImage1,
-  SliderImage2,
-  SliderImage3,
+  "/assets/images/image1.jpg",
+  "/assets/images/image2.jpg",
+  "/assets/images/i3.jpg"
 ];
 const texts = [
   {

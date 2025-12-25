@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
-import WebLogo from "../assets/images/web_logo.png"
 import "../css_file/Appbar.css";
 
 function Appbar() {
+  const WebLogo="/assets/images/web_logo.png";
     return (
         <nav>
             <ul className="appbar">
