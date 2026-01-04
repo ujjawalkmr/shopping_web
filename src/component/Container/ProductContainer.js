@@ -1,9 +1,9 @@
 import "../Container/Container.css";
 import { FaShare } from "react-icons/fa";
 
-function ProductContainer({productImage,productPrice,productDiscription}){
+function ProductContainer({productImage,productPrice,productDiscription,onClick}){
     return(
-       <div className="product-container" onClick={console.log("items tapped")}>
+       <div className="product-container" onClick={onClick}>
   {/* Upper part – Image */}
   <div className="product-image">
     <img src={productImage} alt="Product" />

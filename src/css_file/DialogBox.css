@@ -1,0 +1,68 @@
+/* ========== LIGHTBOX ========== */
+/* Full screen overlay */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Centered container with margin */
+.lightbox-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  background: #fff;
+  width: calc(100% - 160px);   /* margin from screen */
+  height: calc(100% - 120px); /* margin from screen */
+  max-width: 1000px;
+  max-height: 80vh;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image */
+.popup-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Arrows INSIDE container */
+.arrow {
+   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;           /* fixed clickable area */
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  cursor: pointer;
+  user-select: none;
+  color: #000;
+  z-index: 2;
+}
+
+.arrow.left {
+  left: 15px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 26px;
+  cursor: pointer;
+}

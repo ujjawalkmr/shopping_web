@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Appbar from "./component/Appbar";
+import Footer from "./component/Footer";
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Product = lazy(() => import("./pages/Product"));
@@ -9,6 +10,7 @@ const Subscription=lazy(()=>import("./pages/Subscription"));
 const Gift=lazy(()=>import("./pages/Gift"));
 const Login=lazy(()=>import("./pages/Login"));
 const Profile=lazy(()=>import("./pages/Profile"));
+const ProductDetails=lazy(()=>import("./pages/ProductDetails"));
 
 function App() {
 
@@ -28,8 +30,11 @@ function App() {
              <Route path="/gift" element={<Gift />} />
              <Route path="/login" element={<Login/>}/>
              <Route path="profile" element={<Profile/>}/>
+             <Route path="/product_details/:id" element={<ProductDetails />} />
+
         </Routes>
       </Suspense>
+      <Footer/>
       </div>
   );
 }

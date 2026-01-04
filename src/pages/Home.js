@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import ImageSlider from "../component/ImageSlider";
 import TextSlider from "../component/TextSlider";
 import ProductContainer from "../component/Container/ProductContainer";
@@ -6,6 +7,8 @@ import "../css_file/Home.css";
 import ProductData from "../data/productData";
 
 function Home() {
+    const navigate = useNavigate();
+
     // const prductDetails=[
     //     "/assets/images/bread.jpg",
     //     "/assets/images/curd.jpg",
@@ -34,9 +37,10 @@ function Home() {
              {ProductData.map((item)=>(
                <ProductContainer 
                  key={item.id}
-                 productImage={item.image}
+                 productImage={item.image[0]}
                  productPrice={item.price}
                  productDiscription={item.description}
+                 onClick={() => navigate(`/product_details/${item.id}`)}
     />
 ))}
       </div>
