@@ -33,13 +33,13 @@ function ProductGallery({
 }
 
 export default ProductGallery;
- 
 
- {/* LEFT SIDE (50%) */}
-  {/* <div className="left-section"> */}
 
-    {/* Thumbnail column (10%) */}
-    {/* <div className="thumbnails">
+{/* LEFT SIDE (50%) */ }
+{/* <div className="left-section"> */ }
+
+{/* Thumbnail column (10%) */ }
+{/* <div className="thumbnails">
       {product?.image?.map((img, index) => (
         <img
           key={index}
@@ -51,8 +51,8 @@ export default ProductGallery;
       ))}
     </div> */}
 
-{/* Main image area (90%) */}
-  {/* <div className="main-image" onClick={() => setIsOpen(true)}>
+{/* Main image area (90%) */ }
+{/* <div className="main-image" onClick={() => setIsOpen(true)}>
   <img src={mainImage} alt="product" />
 </div> */}
-{/* </div> */}
+{/* </div> */ }

@@ -37,7 +37,7 @@
 /* Main image */
 .main-image {
   width: 88%;
-     cursor: pointer;
+  cursor: pointer;
 
 }
 
@@ -52,5 +52,9 @@
   padding: 20px;
 }
 
+.product-info-button {
+  display: "flex";
+  gap: "10px";
+  color: "#007bff";
 
-
+}
