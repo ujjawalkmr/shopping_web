@@ -6,6 +6,7 @@ import ProductShowDialog from "../component/dialog_box/ProductShowDialog";
 import "../css_file/Product.css";
 import ProductGallery from "../component/Product/ProductGallery";
 import ProductInfo from "../component/Product/ProductInfo";
+import Suggestion from "../component/Suggestion";
 
 
 function ProductDetails() {
@@ -42,29 +43,31 @@ function ProductDetails() {
   if (!product) return <h2>Product not found</h2>;
 
   return (
+    <div>
+      <div className="product-details">
+        <ProductGallery
+          product={product}
+          mainImage={mainImage}
+          onOpen={setIsOpen}
+          setCurrentIndex={setCurrentIndex}
+          setMainImage={setMainImage}
+        />
+        {/* pop image */}
+        <ProductShowDialog
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          product={product}
+          currentIndex={currentIndex}
+          setCurrentIndex={setCurrentIndex}
+          setMainImage={setMainImage}
+        />
+        {/* RIGHT SIDE (50%) */}
+        <ProductInfo
+          product={product}
+        />
 
-    <div className="product-details">
-      <ProductGallery
-        product={product}
-        mainImage={mainImage}
-        onOpen={setIsOpen}
-        setCurrentIndex={setCurrentIndex}
-        setMainImage={setMainImage}
-      />
-      {/* pop image */}
-      <ProductShowDialog
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        product={product}
-        currentIndex={currentIndex}
-        setCurrentIndex={setCurrentIndex}
-        setMainImage={setMainImage}
-      />
-      {/* RIGHT SIDE (50%) */}
-      <ProductInfo
-        product={product}
-      />
-
+      </div>
+      <Suggestion />
     </div>
   )
 }

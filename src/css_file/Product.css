@@ -1,7 +1,9 @@
 .product-details {
   display: flex;
   width: 100%;
-  padding: 20px
+  padding: 20px;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* LEFT & RIGHT equal */
@@ -50,11 +52,12 @@
 /* Right content */
 .right {
   padding: 20px;
+  object-fit: contain;
 }
 
 .product-info-button {
-  display: "flex";
-  gap: "10px";
-  color: "#007bff";
+  display: flex;
+  gap: 10px;
+  color: #007bff;
 
 }
