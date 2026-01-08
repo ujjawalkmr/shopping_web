@@ -1,19 +1,55 @@
 /* Navbar.css */
 .appbar {
-    background-color: rgb(226, 73, 43);
+    background-color: rgb(13, 1, 57);
+      align-items: center;
+
     list-style: none;
     /* remove bullets */
     margin: 0;
-    padding: 1rem;
+     padding-left: 8px; 
+     padding-right:12px ;
     display: flex;
     /* flexbox makes items go in a row */
-    gap: 1rem;
+    gap: 20px;
+    /* min-width: 700px; */
 }
 
 
 
 .appbar li a {
     text-decoration: none;
-    color: #333;
+    color: #fcebeb;
     font-weight: bold;
 }
+.right-menu {
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+    align-items: center;
+
+}
+.login a {
+  display: flex;
+  align-items: center;
+  gap: 8px;   /* 👈 space between icon and text */
+}
+.profile-pic {
+margin-left: 8px;
+  padding: 4px;
+  color: #f5eaea;
+  border: 2px solid #f3e3e3;   /* border color */
+  border-radius: 50%;       /* makes it circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 40px;
+  height: 60px;
+  object-fit: cover;
+}
+
+
+
+
+
