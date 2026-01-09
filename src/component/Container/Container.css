@@ -1,5 +1,7 @@
 .product-container{
   /* height: 200px; */
+    flex-shrink: 0;   /* ⭐ ADD THIS LINE */
+
   width: 200px;
   color: #a02b2b;
   max-width: 1200px;
