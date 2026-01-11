@@ -25,7 +25,8 @@ function About() {
         </p>
     </div>
     <div className="right-side">
-        <h3>abefihbw</h3>
+      <div>qehbwh</div>
+        <h3>abefihrhfwrbhbhbw</h3>
     </div>
 </div>
   </div>
