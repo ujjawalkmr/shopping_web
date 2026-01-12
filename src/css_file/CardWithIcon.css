@@ -12,8 +12,6 @@
     max-width: 1100px;
     margin: 0 auto;
     border-radius: 5px;
-    /* background-color: blueviolet; */
-
 }
 
 .section-title {
@@ -36,7 +34,21 @@
     flex-direction: column;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background-color: rgb(11, 5, 2);
+    opacity: 0;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.main-container {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.main-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .card-header {
@@ -49,10 +61,13 @@
     border-top-right-radius: 8px;
 }
 
+
 .card-body {
     background-color: #f4e7e7;
     padding: 40px 20px 30px;
+    min-height: 70px;
     flex-grow: 1;
+    background-color: aqua;
 
 
 }
@@ -109,4 +124,64 @@
 /* Green */
 .community .icon-circle {
     background-color: #9cbd8e;
+}
+
+/* ===== YOUR EXISTING DESIGN CSS ===== */
+/* (keep your current styles here exactly as they are) */
+
+
+.value-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Trigger animation ONLY when show is added */
+.animate-left.show {
+    animation: slideFromLeft 1s ease-out forwards;
+}
+
+.animate-bottom.show {
+    animation: slideFromBottom 1s ease-out forwards;
+}
+
+.animate-right.show {
+    animation: slideFromRight 1s ease-out forwards;
+}
+
+/* Animations */
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-80px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromBottom {
+    from {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(80px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

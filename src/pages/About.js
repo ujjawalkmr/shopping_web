@@ -5,6 +5,26 @@ import Divider from "@mui/material/Divider";
 import CardWithIcon from "../component/Container/CardWithIcon";
 
 function About() {
+   const values = [
+          {
+              title: "Sustainability",
+              description: "Protecting our for future generations",
+              icon: "🌱",
+              className: "sustainability"
+          },
+          {
+              title: "Quality",
+              description: "Pure, wholesome dairy products",
+              icon: "🥛",
+              className: "quality"
+          },
+          {
+              title: "Community",
+              description: "Trusted local provider",
+              icon: "🤝",
+              className: "community"
+          }
+      ];
   return <div className="about-container">
     <img
       className="about-image"
@@ -38,7 +58,9 @@ function About() {
 
     </div>
     <Divider sx={{ borderBottomWidth: 1, borderColor: '#3d3939ff', marginTop: '40px', marginLeft: "80px", marginRight: "80px", marginBottom: '20px' }} />
-    <CardWithIcon />
+    <CardWithIcon 
+    values={values}
+    />
   </div>
 }
 
