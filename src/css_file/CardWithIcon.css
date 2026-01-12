@@ -1,0 +1,112 @@
+/* Section Styles */
+.core-values-section {
+    background-color: white;
+    /* padding: 60px 20px; */
+    padding-bottom: 20px;
+    font-family: sans-serif;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 5px;
+    /* background-color: blueviolet; */
+
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Card Styles */
+.value-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: rgb(11, 5, 2);
+}
+
+.card-header {
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 8px;
+    /* round top-left */
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    background-color: #f4e7e7;
+    padding: 40px 20px 30px;
+    flex-grow: 1;
+
+
+}
+
+.value-title {
+    font-weight: bold;
+    color: #222;
+}
+
+/* Icon Circle Positioning */
+.icon-circle {
+    position: absolute;
+    bottom: -25px;
+    /* Overlaps exactly in the middle of header and body */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #f3f4f6;
+    /* Matches section background */
+    color: white;
+}
+
+.icon-circle svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Color Variations */
+.sustainability {
+    background-color: #d4a017;
+}
+
+/* Gold */
+.sustainability .icon-circle {
+    background-color: #d4a017;
+}
+
+.quality {
+    background-color: #87b9bd;
+}
+
+/* Teal */
+.quality .icon-circle {
+    background-color: #87b9bd;
+}
+
+.community {
+    background-color: #9cbd8e;
+}
+
+/* Green */
+.community .icon-circle {
+    background-color: #9cbd8e;
+}
