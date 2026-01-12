@@ -50,7 +50,7 @@
 .left-side {
   display: flex;
   align-items: center;
-  background-color: aqua;
+  /* background-color: aqua; */
   flex-direction: column;
   flex: 2;
   /* 50% */
@@ -59,17 +59,19 @@
   /* horizontal center */
 
   align-self: flex-start;
-  border: 1px solid #110e0e;
+  /* border: 1px solid #110e0e; */
 }
+
 .heading {
   padding-left: 20%;
   align-self: start;
   color: blue;
   font-size: 36px;
 }
-.paragraph{
-   padding-left: 20%;
-   padding-right: 20%;
+
+.paragraph {
+  padding-left: 20%;
+  padding-right: 20%;
   align-self: start;
   color: blue;
 }
@@ -82,7 +84,12 @@
   justify-content: center;
   /* horizontal center */
   align-items: center;
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
+}
+
+.avatar {
+  border: 4px solid #110e0e;
+  margin-right: 40px;
 }
 
 @keyframes fromLeft {
@@ -107,4 +114,10 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+hr {
+  border: none;
+  border-top: 5px solid #b91010;
+  margin: 20px 0;
 }
