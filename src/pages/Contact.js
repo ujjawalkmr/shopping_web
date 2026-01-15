@@ -1,9 +1,14 @@
 import React from "react";
 import "../css_file/Contact.css";
+// import bg from "/assets/images/contact_backgroun_image.png"
 
 export default function Contact() {
+    const bgImage="/assets/images/contact_background_image.png";
+
   return (
-    <div className="contact-page">
+    <div className="contact-age">
+              <img src={bgImage} alt="background" className="bg-image" />
+
       <div className="contact-wrapper">
         
         {/* Left: Contact Info */}
