@@ -1,7 +1,5 @@
-// data/products.js
 import { loremIpsum } from "lorem-ipsum";
-
-const products = [
+const allProducts = [
   {
     id: 1,
     image: ["/assets/images/bread.jpg", "/assets/images/curd.jpg", "/assets/images/butter.jpg", "/assets/images/fruitShek.jpg", "/assets/images/milk.webp",],
@@ -63,8 +61,7 @@ const products = [
     price: "₹799",
     description: "Bluetooth speaker",
     details: loremIpsum({ count: 10, units: "sentences" })
-
-  },
+},
    {  
     id: 9,
     image: ["/assets/images/bread.jpg", "/assets/images/curd.jpg", "/assets/images/butter.jpg", "/assets/images/fruitShek.jpg", "/assets/images/milk.webp",],
@@ -128,6 +125,8 @@ const products = [
     details: loremIpsum({ count: 10, units: "sentences" })
 
   }
+
+  
 ];
 
-export default products;
+export {allProducts};

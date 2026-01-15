@@ -15,7 +15,7 @@ function Appbar() {
                 <li><Link to="/product">Product</Link></li>
                 <li><Link to="/product">Milk Subscription</Link></li>
                 <li><Link to="/product">Gift</Link></li>
-                <li><Link to="/product">Contact</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
 
                  <div className="right-menu">
                    <li className="login">
