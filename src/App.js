@@ -29,7 +29,7 @@ function App() {
             <Route path="/subscription" element={<Subscription />} />
              <Route path="/gift" element={<Gift />} />
              <Route path="/login" element={<Login/>}/>
-             <Route path="profile" element={<Profile/>}/>
+             <Route path="/profile" element={<Profile/>}/>
              <Route path="/product_details/:id" element={<ProductDetails />} />
 
         </Routes>
