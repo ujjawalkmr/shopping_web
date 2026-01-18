@@ -36,7 +36,7 @@
 
   width: 90%;
   max-width: 1000px;
-background-color: #c072b1;
+background-color: #140944;
 margin: 40px auto;
 padding: 60px;
   display: grid;
@@ -48,8 +48,8 @@ padding: 60px;
 
 /* CARD STYLE */
 .contact-card {
-  background: #ffffff;
-  padding: 25px;
+  background: #e791e5;
+  padding: 25px 25px;
   border-radius: 14px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
@@ -73,6 +73,7 @@ padding: 60px;
 /* FORM */
 .contact-form {
   margin-top: 10px;
+  margin-right: 20px;
 }
 
 .contact-form input,
